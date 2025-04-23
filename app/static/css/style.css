@@ -1,33 +1,178 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', 'Arial', sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 40px;
+    background-color: #1e2525;
+    color: #d4d4d4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
 }
+
 nav {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    background-color: #2a3439;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    border: 1px solid #3cff8b;
 }
+
 nav a {
-    margin-right: 10px;
+    margin: 0 20px;
     text-decoration: none;
-    color: #333;
+    color: #3cff8b;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s, text-shadow 0.3s;
 }
+
+nav a:hover {
+    color: #2de07a;
+    text-shadow: 0 0 8px rgba(60, 255, 139, 0.6);
+}
+
 form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    max-width: 300px;
+    gap: 15px;
+    max-width: 450px;
+    width: 100%;
+    background-color: #2a3439;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid #3cff8b;
 }
+
+form label {
+    font-weight: 500;
+    color: #d4d4d4;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="file"] {
+    padding: 12px;
+    background-color: #1e2525;
+    border: 1px solid #3cff8b;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #d4d4d4;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #2de07a;
+    box-shadow: 0 0 8px rgba(60, 255, 139, 0.5);
+}
+
 button {
-    padding: 10px;
-    background: #333;
-    color: white;
+    padding: 12px;
+    background: linear-gradient(45deg, #3cff8b, #2de07a);
+    color: #1e2525;
     border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
     cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.2s, box-shadow 0.3s;
 }
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(60, 255, 139, 0.6);
+}
+
 ul {
     list-style: none;
     padding: 0;
+    width: 100%;
+    max-width: 700px;
 }
+
 li {
-    margin: 10px 0;
+    margin: 15px 0;
+    background-color: #2a3439;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #3cff8b;
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: translateY(-3px);
+}
+
+li a {
+    color: #3cff8b;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+li a:hover {
+    color: #2de07a;
+    text-shadow: 0 0 8px rgba(60, 255, 139, 0.6);
+}
+
+h2 {
+    color: #3cff8b;
+    text-align: center;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+/* Стили для флэш-сообщений */
+ul[style*="flashed-messages"] {
+    width: 100%;
+    max-width: 700px;
+    padding: 0;
+}
+
+ul[style*="flashed-messages"] li {
+    background-color: #2a3439;
+    color: #3cff8b;
+    border-left: 4px solid #3cff8b;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+    nav, form, ul {
+        max-width: 100%;
+    }
+    nav a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+    form {
+        padding: 15px;
+    }
 }
